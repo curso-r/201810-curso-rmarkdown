@@ -1,0 +1,238 @@
+---
+title: "RMarkdown"
+subtitle: "Um minicurso prático"
+author: "Julio Trecenti</br>Curso-R"
+date: "2018-10-05"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE,
+                      fig.align = "center")
+```
+
+class: inverse, middle
+
+# Introdução
+
+---
+class: middle 
+
+# Onde estamos?
+
+```{r}
+knitr::include_graphics("imgs/data-science-communicate.png")
+```
+
+---
+
+# Pra quê RMarkdown?
+
+--
+
+### RMarkdown é uma forma de integrar `texto` e `código`
+
+--
+
+### O código roda e o texto é transformado em um documento.
+
+--
+
+### Vejamos o showcase!
+
+---
+
+# Por quê RMarkdown?
+
+--
+
+.pull-left[
+
+### Versátil
+
+- Relatórios em $\LaTeX$, Word, HTML.
+- Apresentações em Beamer, PPTX e HTML. 
+- Sites, livros, dissertações, artigos, dashboards.
+
+### Direto
+
+- É simples por design. 
+- Te obriga a focar no **conteúdo** e não na *formatação* .
+
+]
+
+--
+
+.pull-right[
+
+### Reprodutível
+
+- RMarkdown é **texto**. 
+- Fácil de compartilhar e de ser utilizado pela receptora. 
+- Atende aos princípios fundamentais da ciência. 
+
+
+### Eficiente
+
+- Crie templates para análises automáticas.
+- Ganhe tempo e seja super produtiva
+
+]
+
+---
+
+# Como usar RMarkdown?
+
+5 passos para o sucesso
+
+--
+
+### Aprenda a sintaxe do `markdown`
+
+--
+
+### Aprenda a usar chunks
+
+--
+
+### Aprenda a usar o yaml
+
+--
+
+### Use para fazer listas de exercícios e escrever notas de aula
+
+--
+
+### Aprenda a partilhar
+
+---
+
+# Requisitos
+
+- **RStudio**: não é necessário, mas é muito melhor.
+- **R básico**: também não é necessário, mas é muito melhor.
+
+--
+
+## Desejáveis
+
+- Conhecer um pouco da **estrutura** do **output** (HTML, Word, $\LaTeX$)
+- Estudar `knitr`. Faz o trabalho sujo de transformar Rmd em md.
+- Estudar `pandoc`. Faz o trabalho sujo de transformar md em DOCX, HTML etc.
+- Estudar **Git/Github**. Para partilhar seus resultados.
+
+---
+class: inverse, middle
+
+# Conceitos (no R)
+
+---
+class: inverse, middle
+
+# Exercício
+
+---
+
+## Parte 1: Setup
+
+1. Entre com seu usuário e senha em http://r.curso-r.com
+1. Crie um novo projeto
+1. Crie um Relatório RMarkdown HTML
+1. Salve o arquivo
+1. Mande compilar
+1. Abra o cheatsheet do RMarkdown
+
+---
+
+## Parte 2: Do it
+
+**Objetivo**: Montar uma lista de exercícios em HTML e PDF.
+
+1. Escreva uma equação
+1. Adicione dois gráficos:
+  - o primeiro mostrando o código,
+  - o segundo sem mostrar o código.
+1. Adicione uma tabela.
+1. Adicione duas imagens:
+  - A primeira com `knitr::include_graphics()`.
+  - A segunda com `![]()`
+1. Adicione uma footnote com `^[cite]`
+1. Adicione uma citação com `[@item]`
+    - Crie um arquivo `refs.bib`
+    - Adicione `bibliography: refs.bib` no YAML
+    - Adicione uma bibtex (pesquisando no google scholar ou usando `citation()`)
+
+---
+
+## Parte 3: Entrega
+
+1. Renderize o relatório em pdf e html
+1. Baixe os arquivos para sua máquina (Files > Selecionar arquivos > Export)
+1. Preencha o formulário: http://bit.ly/curso-rmd
+
+---
+class: inverse, middle
+
+# Partilhar
+
+---
+
+# Github
+
+1. Crie uma conta no Github
+1. Crie um repositório no Github
+1. Crie um projeto a partir desse repositório
+    - Projetos > novo projeto > Version Control > Git > Colar URL do repo
+1. Coloque seu rmarkdown em qualquer lugar
+1. Compile seu rmarkdown para uma saída `.html`
+  - Dica: salve como `index.html` para não precisar colocar o nome do arquivo.
+1. Salve seu arquivo `.html` numa pasta chamada `docs`
+1. Suba tudo para o Github
+
+## Exemplos
+
+- dashboard
+- apresentação
+
+---
+
+# Netlify
+
+1. Faça os passos 1-4 do tutorial anterior
+1. Crie uma conta no Netlify
+1. Autorize sua aplicação
+1. Next next next Submit
+    - Caso seu site seja um blogdown ou algo assim, você precisará mudar algumas configurações.
+    
+---
+class: middle, center
+
+# Obrigado :)
+
+**Apresentação**
+
+[https://curso-r.github.io/201810-curso-rmarkdown](curso-r.github.io/201810-curso-rmarkdown)
+
+**Códigos** e links dos **Showcases**
+
+[https://github.com/curso-r/201810-curso-rmarkdown](https://github.com/curso-r/201810-curso-rmarkdown).
+
+**Contato** 
+
+[contato@curso-r.com](mailto:contato@curso-r.com)
+
+made with ❤ ️by
+
+[
+```{r echo=FALSE, out.width="50%"}
+knitr::include_graphics("imgs/curso-r.png")
+```
+](https://curso-r.com)

@@ -1,0 +1,51 @@
+---
+title: "Relatorio"
+output: 
+  # pdf_document
+  html_document
+bibliography: refs.bib 
+---
+
+# Equação
+
+$$
+e^x
+$$
+
+# Gráficos
+
+## Com código
+
+```{r}
+plot(1:10)
+```
+
+## Sem código
+
+```{r echo=FALSE}
+hist(rnorm(100))
+```
+
+# Tabela
+
+```{r}
+knitr::kable(head(cars))
+```
+
+# Imagens
+
+Imagem com `knitr`
+
+```{r}
+knitr::include_graphics("/home/jtrecenti/Downloads/cursor1-41.png")
+```
+
+Imagem direto no markdown
+
+![img](/home/jtrecenti/Downloads/cursor1-41.png)
+
+Isso é uma citação de [@ggplot]. Isso é um footnote[^foot]
+
+[^foot]: footnotes são legais mas devem ser usados com cuidado.
+
+# Bibliografia

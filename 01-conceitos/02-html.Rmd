@@ -1,0 +1,65 @@
+---
+title: "Untitled"
+author: "Daniel"
+date: "8/30/2018"
+output: html_document
+---
+
+## Habilitar TOC
+
+Você pode colocar um índice acrescentando o conteúdo a seguir no yaml:
+
+```
+---
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+---
+```
+
+Existe também uma opção `float`:
+
+```
+---
+output:
+  html_document:
+    toc: true
+    toc_float: true
+---
+```
+
+
+## Númerar sessões
+
+```
+---
+title: "Habits"
+output:
+  html_document:
+    toc: true
+    number_sections: true
+---
+```
+
+Se você não quiser numerar uma sessão pode fazer assim:
+
+## Sessão sem número {-}
+
+## Sessão com abas {.tabset}
+
+### By Product
+
+(tab content)
+
+### By Region
+
+(tab content)
+
+## Documentos self-contained
+
+```
+self_contained: true
+```
+
+Permite que o arquivo html possa ser enviado por e-mail e aberto por qualquer pessoa.

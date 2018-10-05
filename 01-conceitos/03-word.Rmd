@@ -1,0 +1,34 @@
+---
+title: "Word"
+author: "Daniel"
+date: "8/30/2018"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Uma sessão
+
+```{r cars}
+summary(cars)
+```
+
+## Gráficos
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Equações também funcionam:
+
+$$X^2 + y$$
+
+Você pode criar um template novo p/ o Word modificando um arquivo output e incluindo o seguinte no `yaml` do início do arquivo:
+
+```
+output:
+  word_document:
+    reference_docx: my-styles.docx
+```

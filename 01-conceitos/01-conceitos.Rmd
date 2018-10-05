@@ -1,0 +1,120 @@
+---
+title: "Curso: RMarkdown"
+author: "Daniel"
+date: "30/08/2018"
+output: html_document
+---
+
+## A linguagem Markdown
+
+- **negrito** ou __negrito__
+- *itálico* ou _itálico_ 
+- H~subscrito~
+- H^superescrito^
+- `código na linha`
+- [links](https://www.curso-r.com)
+
+# Título Grande
+## Título um pouco menor
+### Título menor ainda
+#### menor ainda
+
+> Citações podem ser escritas assim!
+> 
+> --- RMarkdown
+
+```
+Blocos de código podem ser inseridos assim!
+
+# Aqui títulos não se transformam em títulos.
+```
+
+1. item
+1. iza
+1. ção
+
+Expressões matemáticas na linha: $X^{T}X$
+
+$$(X^TX)^{-1}X^Ty$$
+
+--------------------------------------------------------------------------------
+
+
+## Usando códigos em R no RMarkdown
+
+```{r}
+x <- 1
+x
+```
+
+ctrl + alt + I cria um novo *chunk*
+
+```{r}
+
+```
+
+Podemos inserir figuras
+
+```{r}
+plot(1:10)
+```
+
+Os chunks possuem opções:
+
+```{r chunk-label, out.width="50%"}
+plot(1:10)
+```
+
+Outras opções:
+
+- `eval`: Whether to evaluate a code chunk.
+
+- `echo`: Whether to echo the source code in the output document (someone may not prefer reading your smart source code but only results).
+
+- `results`: When set to `'hide'`, text output will be hidden; when set to `'asis'`, text output is written "as-is", e.g., you can write out raw Markdown text from R code (like `cat('**Markdown** is cool.\n')`). By default, text output will be wrapped in verbatim elements (typically plain code blocks).
+
+- `collapse`: Whether to merge text output and source code into a single code block in the output. This is mostly cosmetic: `collapse = TRUE` makes the output more compact, since the R source code and its text output are displayed in a single output block. The default `collapse = FALSE` means R expressions and their text output are separated into different blocks.
+
+- `warning`, `message`, and `error`: Whether to show warnings, messages, and errors in the output document. Note that if you set `error = FALSE`, `rmarkdown::render()` will halt on error in a code chunk, and the error will be displayed in the R console. Similarly, when `warning = FALSE` or `message = FALSE`, these messages will be shown in the R console.
+
+- `include`: Whether to include anything from a code chunk in the output document. When `include = FALSE`, this whole code chunk is excluded in the output, but note that it will still be evaluated if `eval = TRUE`. When you are trying to set `echo = FALSE`, `results = 'hide'`, `warning = FALSE`, and `message = FALSE`, chances are you simply mean a single option `include = FALSE` instead of suppressing different types of text output individually.
+
+- `cache`: Whether to enable caching. If caching is enabled, the same code chunk will not be evaluated the next time the document is compiled (if the code chunk was not modified), which can save you time. However, I want to honestly remind you of the two hard problems in computer science (via Phil Karlton): naming things, and cache invalidation. Caching can be handy but also tricky sometimes.
+
+- `fig.width` and `fig.height`: The (graphical device) size of R plots in inches. R plots in code chunks are first recorded via a graphical device in **knitr**, and then written out to files. You can also specify the two options together in a single chunk option `fig.dim`, e.g., `fig.dim = c(6, 4)` means `fig.width = 6` and `fig.height = 4`.
+
+- `out.width` and `out.height`: The output size of R plots in the output document. These options may scale images. You can use percentages, e.g., `out.width = '80%'` means 80% of the page width.
+
+- `fig.align`: The alignment of plots. It can be `'left'`, `center`, or `'right'`.
+
+- `dev`: The graphical device to record R plots. Typically it is `'pdf'` for LaTeX output, and `'png'` for HTML output, but you can certainly use other devices, such as `'svg'` or `'jpeg'`.
+
+- `fig.cap`: The figure caption.
+
+- `child`: You can include a child document in the main document. This option takes a path to an external file.
+
+
+Você pode criar um chunk no início do seu markdown com opções gerais p/ todos os outros:
+
+```{r setup, include=FALSE, eval=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Output de tabelas:
+
+```{r}
+knitr::kable(iris[1:5, ], caption = 'A caption')
+```
+
+```{r}
+DT::datatable(mtcars)
+```
+
+
+
+
+
+
+
+
+

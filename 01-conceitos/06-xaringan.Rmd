@@ -1,0 +1,60 @@
+---
+title: "Presentation Ninja"
+subtitle: "⚔<br/>with xaringan"
+author: "Yihui Xie"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: middle, center
+
+# oi
+
+---
+class inverse
+
+# Oi slide 2
+
+---
+
+```{r}
+plot(1:10)
+```
+
+---
+
+.pull-right[
+```{r}
+plot(1:10)
+```
+]
+
+.pull-left[
+```{r}
+1 + 1
+```
+]
+
+---
+
+# Slides incrementais
+
+--
+
+Oi
+
+--
+
+Oi2
+
+--
+
+```{r}
+plot(1:10)
+```
+

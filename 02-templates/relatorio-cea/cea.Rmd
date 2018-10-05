@@ -1,0 +1,195 @@
+---
+title: "RAE - CEA xxPxx"
+subtitle: "RELATÓRIO DE ANÁLISE ESTATÍSTICA SOBRE O PROJETO:"
+lang: pt
+output: 
+  word_document:
+    reference_docx: "cea-reference.docx"
+    fig_caption: yes
+bibliography: bibliografia.bib
+---
+
+
+```{r setup, echo=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+
+fig_caps <- captioner::captioner(prefix = "Figura")
+plot_caps <- captioner::captioner(prefix = "Gráfico")
+tab_caps <- captioner::captioner(prefix = "Tabela")
+```
+
+```{r captions}
+plot1_cap <- plot_caps(
+  name = "plot1", 
+  caption = "Essa é a legenda do gráfico."
+) 
+
+tab1_cap <- tab_caps(
+  name = "tab1", 
+  caption = "Essa é a legenda da tabela."
+) 
+
+```
+
+
+#### "Nome do projeto"
+
+##### Line break
+##### 
+#####
+#####
+#####
+#####
+#####
+
+#### Professoa X
+#### Professor Y
+#### Aluno A
+#### Aluna B
+
+##### Line break
+#####
+#####
+#####
+#####
+#####
+#####
+
+#### São Paulo, xx de xx de 201x
+
+###### Page Break
+
+####### CENTRO DE ESTATÍSTICA APLICADA --- CEA --- USP
+####### RELATÓRIO DE ANÁLISE ESTATÍSTICA CÓDIGO XXPXX
+
+#####
+
+####### TÍTULO: Relatório de análise estatística sobre o projeto: "Nome do projeto"
+
+#####
+
+####### PESQUISADORA: nome da pesquisadora 
+
+#####
+
+####### INSTITUIÇÃO: nome da instituição
+
+#####
+
+####### FINALIDADE DO PROJETO: finalidade do projeto
+
+#####
+
+####### RESPONSÁVEIS PELA ANÁLISE:
+
+Professora X
+
+Professor Y
+
+Aluno A
+
+Aluna B
+
+#####
+
+####### REFERÊNCIA DESTE TRABALHO:
+
+referência deste trabalho
+
+#####
+
+####### FICHA TÉCNICA
+
+####### PROGRAMAS COMPUTACIONAIS UTILIZADOS
+
+Programa 1
+
+Programa 2
+
+Programa 3
+
+#####
+
+####### TÉCNICAS ESTATÍSTICAS UTILIZADAS
+
+Técnica 1
+
+Técnica 2
+
+Tëcnica 3
+
+#####
+
+####### ÁREA DE APLICAÇÃO
+
+Área de aplicação
+
+###### Page Break
+
+####### Resumo
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet. [@R-base]
+
+###### Page Break
+
+# Introdução
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+# Descrição do estudo
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+# Descrição das variáveis
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+## Subtópico 1
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+## Subtópico 2
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+# Análise descritiva
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu `r plot_caps("plot1", display = "cite")`. 
+
+```{r, fig.cap = plot1_cap}
+hist(rnorm(1:1000))
+```
+
+Cras nona varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad curso-r litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet `r tab_caps("tab1", display = "cite")`.
+
+```{r, results='asis'}
+library(dplyr)
+mtcars %>% 
+  select(mpg, cyl, am) %>% 
+  slice(1:10) %>% 
+  pander::pandoc.table(
+    caption = tab1_cap
+  )
+```
+
+
+# Análise inferencial
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend odio et auctor volutpat. Morbi maximus velit sit amet quam pulvinar aliquam. Aliquam erat volutpat. Phasellus scelerisque velit mauris, id auctor felis iaculis ac. Aliquam porta felis nec mollis congue. In sed tortor nunc. Proin luctus tincidunt volutpat. Aenean vel pharetra mauris. Sed eu nisl accumsan, egestas ligula vestibulum, volutpat libero. Sed mattis molestie mi at pharetra. Vestibulum fermentum tellus vitae lorem commodo, vitae iaculis metus cursus. Mauris rhoncus varius finibus. Vivamus finibus consectetur justo, ut elementum nibh vehicula eu.
+
+Cras non varius libero. Vivamus ac arcu erat. Aenean vitae pulvinar lacus. Etiam ultrices, eros vitae rhoncus convallis, sapien arcu bibendum purus, ut suscipit lectus urna ac magna. Sed at consequat augue. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque aliquet vel tellus quis faucibus. Nulla et nibh nibh. Nunc consectetur magna eu lorem ultricies, nec venenatis velit imperdiet.
+
+######## Referências
+ 

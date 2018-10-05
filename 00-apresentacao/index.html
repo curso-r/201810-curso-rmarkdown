@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RMarkdown</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Julio TrecentiCurso-R" />
+    <meta name="date" content="2018-10-05" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# RMarkdown
+## Um minicurso prático
+### Julio Trecenti</br>Curso-R
+### 2018-10-05
+
+---
+
+
+
+
+class: inverse, middle
+
+# Introdução
+
+---
+class: middle 
+
+# Onde estamos?
+
+&lt;img src="imgs/data-science-communicate.png" width="689" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Pra quê RMarkdown?
+
+--
+
+### RMarkdown é uma forma de integrar `texto` e `código`
+
+--
+
+### O código roda e o texto é transformado em um documento.
+
+--
+
+### Vejamos o showcase!
+
+---
+
+# Por quê RMarkdown?
+
+--
+
+.pull-left[
+
+### Versátil
+
+- Relatórios em `\(\LaTeX\)`, Word, HTML.
+- Apresentações em Beamer, PPTX e HTML. 
+- Sites, livros, dissertações, artigos, dashboards.
+
+### Direto
+
+- É simples por design. 
+- Te obriga a focar no **conteúdo** e não na *formatação* .
+
+]
+
+--
+
+.pull-right[
+
+### Reprodutível
+
+- RMarkdown é **texto**. 
+- Fácil de compartilhar e de ser utilizado pela receptora. 
+- Atende aos princípios fundamentais da ciência. 
+
+
+### Eficiente
+
+- Crie templates para análises automáticas.
+- Ganhe tempo e seja super produtiva
+
+]
+
+---
+
+# Como usar RMarkdown?
+
+5 passos para o sucesso
+
+--
+
+### Aprenda a sintaxe do `markdown`
+
+--
+
+### Aprenda a usar chunks
+
+--
+
+### Aprenda a usar o yaml
+
+--
+
+### Use para fazer listas de exercícios e escrever notas de aula
+
+--
+
+### Aprenda a partilhar
+
+---
+
+# Requisitos
+
+- **RStudio**: não é necessário, mas é muito melhor.
+- **R básico**: também não é necessário, mas é muito melhor.
+
+--
+
+## Desejáveis
+
+- Conhecer um pouco da **estrutura** do **output** (HTML, Word, `\(\LaTeX\)`)
+- Estudar `knitr`. Faz o trabalho sujo de transformar Rmd em md.
+- Estudar `pandoc`. Faz o trabalho sujo de transformar md em DOCX, HTML etc.
+- Estudar **Git/Github**. Para partilhar seus resultados.
+
+---
+class: inverse, middle
+
+# Conceitos (no R)
+
+---
+class: inverse, middle
+
+# Exercício
+
+---
+
+## Parte 1: Setup
+
+1. Entre com seu usuário e senha em http://r.curso-r.com
+1. Crie um novo projeto
+1. Crie um Relatório RMarkdown HTML
+1. Salve o arquivo
+1. Mande compilar
+1. Abra o cheatsheet do RMarkdown
+
+---
+
+## Parte 2: Do it
+
+Objetivo: Montar uma lista de exercícios em HTML e PDF.
+
+1. Escreva uma equação
+1. Adicione dois gráficos:
+  - o primeiro mostrando o código,
+  - o segundo sem mostrar o código.
+1. Adicione uma tabela.
+1. Adicione duas imagens:
+  - A primeira com `knitr::include_graphics()`.
+  - A segunda com `![]()`
+1. Adicione uma footnote com `^[cite]`
+1. Adicione uma citação com `[@item]`
+    - Crie um arquivo `refs.bib`
+    - Adicione `bibliography: refs.bib` no YAML
+    - Adicione uma bibtex (pesquisando no google scholar ou usando `citation()`)
+
+---
+
+## Parte 3: Entrega
+
+1. Renderize o relatório em pdf e html
+1. Baixe os arquivos para sua máquina (Files &gt; Selecionar arquivos &gt; Export)
+1. Preencha o formulário: http://bit.ly/curso-rmd
+
+---
+class: inverse, middle
+
+# Partilhar
+
+---
+
+# Github
+
+1. Crie uma conta no Github
+1. Crie um repositório no Github
+1. Crie um projeto a partir desse repositório
+    - Projetos &gt; novo projeto &gt; Version Control &gt; Git &gt; Colar URL do repo
+1. Coloque seu rmarkdown em qualquer lugar
+1. Compile seu rmarkdown para uma saída `.html`
+  - Dica: salve como `index.html` para não precisar colocar o nome do arquivo.
+1. Salve seu arquivo `.html` numa pasta chamada `docs`
+1. Suba tudo para o Github
+
+## Exemplos
+
+- dashboard
+- apresentação
+
+---
+
+# Netlify
+
+1. Faça os passos 1-4 do tutorial anterior
+1. Crie uma conta no Netlify
+1. Autorize sua aplicação
+1. Next next next Submit
+    - Caso seu site seja um blogdown ou algo assim, você precisará mudar algumas configurações.
+    
+---
+class: middle, center
+
+# Fim :)
+
+**Apresentação**
+
+[https://curso-r.github.io/201810-curso-rmarkdown](curso-r.github.io/201810-curso-rmarkdown)
+
+**Códigos** e links dos **Showcases**
+
+[https://github.com/curso-r/201810-curso-rmarkdown](https://github.com/curso-r/201810-curso-rmarkdown).
+
+**Contato** 
+
+[contato@curso-r.com](mailto:contato@curso-r.com)
+
+Made with ❤ ️by
+
+[
+&lt;img src="imgs/curso-r.png" width="50%" style="display: block; margin: auto;" /&gt;
+](curso-r.com)
+    </textarea>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function() {
+  var d = document, s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})();</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+});
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
