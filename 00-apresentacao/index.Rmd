@@ -196,6 +196,8 @@ class: inverse, middle
   - Dica: salve como `index.html` para não precisar colocar o nome do arquivo.
 1. Salve seu arquivo `.html` numa pasta chamada `docs`
 1. Suba tudo para o Github
+1. Mude as configurações do repositório
+    - Engrenagem > scroll scroll > Github pages > Source: `master branch /docs folder`
 
 ## Exemplos
 
