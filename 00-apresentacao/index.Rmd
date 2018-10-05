@@ -215,6 +215,16 @@ class: inverse, middle
     - Caso seu site seja um blogdown ou algo assim, você precisará mudar algumas configurações.
     
 ---
+
+# Next steps
+
+- Faça suas listas de exercícios em Rmd
+- Faça um livro para notas de aula em Rmd
+- Faça um blog em Rmd
+- Faça seu CEA em Rmd
+- Aprenda a rodar com shiny (mais difícil de partilhar)
+
+---
 class: middle, center
 
 # Obrigado :)
